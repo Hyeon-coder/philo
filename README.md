@@ -11,47 +11,9 @@ An implementation of the classic **Dining Philosophers Problem** built at [Hive 
 
 ## Demo
 
-```
-$ ./philo 5 800 200 200
-0 ms  1 has taken a fork
-0 ms  1 has taken a fork
-0 ms  1 is eating
-0 ms  3 has taken a fork
-0 ms  3 has taken a fork
-0 ms  3 is eating
-200 ms  1 is sleeping
-200 ms  3 is sleeping
-200 ms  5 has taken a fork
-200 ms  5 has taken a fork
-200 ms  5 is eating
-200 ms  2 has taken a fork
-200 ms  2 has taken a fork
-200 ms  2 is eating
-400 ms  1 is thinking
-400 ms  5 is sleeping
-400 ms  3 is thinking
-400 ms  4 has taken a fork
-400 ms  4 has taken a fork
-400 ms  4 is eating
-...
-```
+![Demo](assets/demo.gif)
 
-```
-$ ./philo 4 310 200 100
-0 ms  1 has taken a fork
-0 ms  1 has taken a fork
-0 ms  1 is eating
-0 ms  3 has taken a fork
-0 ms  3 has taken a fork
-0 ms  3 is eating
-200 ms  1 is sleeping
-200 ms  3 is sleeping
-200 ms  2 has taken a fork
-200 ms  2 has taken a fork
-200 ms  2 is eating
-300 ms  1 is thinking
-310 ms  4 died
-```
+*Normal run (5 philosophers) → Death case (4 philosophers, tight timing)*
 
 ---
 
