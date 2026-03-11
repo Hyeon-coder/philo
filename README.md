@@ -31,12 +31,12 @@ An implementation of the classic **Dining Philosophers Problem** built at [Hive 
             \                  /
              🍽️  [Fork 2]  🍽️
               Philosopher 3
-                   |
+                    |
               Philosopher 4
 
 
-    ┌──────────────────────────────────────────┐
-    │             Main Thread                   │
+    ┌─────────────────────────────────────────┐
+    │             Main Thread                 │
     │  ┌─────────┐ ┌─────────┐ ┌─────────┐    │
     │  │ Philo 1 │ │ Philo 2 │ │ Philo N │    │
     │  │ Thread  │ │ Thread  │ │ Thread  │    │
@@ -45,19 +45,19 @@ An implementation of the classic **Dining Philosophers Problem** built at [Hive 
     │  │ sleep►  │ │ sleep►  │ │ sleep►  │    │
     │  │ think   │ │ think   │ │ think   │    │
     │  └────┬────┘ └────┬────┘ └────┬────┘    │
-    │       │           │           │          │
-    │       ▼           ▼           ▼          │
-    │  ┌──────────────────────────────────┐    │
-    │  │     Shared Forks (Mutexes)       │    │
-    │  │  [M0]  [M1]  [M2] ... [M(N-1)]  │    │
-    │  └──────────────────────────────────┘    │
-    │                                          │
-    │  ┌──────────────────────────────────┐    │
-    │  │   Monitor Thread (Death Check)    │    │
-    │  │   Checks each philo's last meal   │    │
-    │  │   time_to_die exceeded → stop all │    │
-    │  └──────────────────────────────────┘    │
-    └──────────────────────────────────────────┘
+    │       │           │           │         │
+    │       ▼           ▼           ▼         │
+    │  ┌──────────────────────────────────┐   │
+    │  │     Shared Forks (Mutexes)       │   │
+    │  │  [M0]  [M1]  [M2] ... [M(N-1)]   │   │
+    │  └──────────────────────────────────┘   │
+    │                                         │
+    │  ┌──────────────────────────────────┐   │
+    │  │   Monitor Thread (Death Check)   │   │
+    │  │   Checks each philo's last meal  │   │
+    │  │   time_to_die exceeded → stop all│   │
+    │  └──────────────────────────────────┘   │
+    └─────────────────────────────────────────┘
 ```
 
 ---
