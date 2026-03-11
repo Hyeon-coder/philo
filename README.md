@@ -166,9 +166,3 @@ The monitor thread must detect death within the `time_to_die` window. If detecti
 
 ### 4. Eliminating Data Races
 Every piece of shared state — last meal time, eat count, death flag — must be protected by mutexes. I verified correctness using **Helgrind** and **ThreadSanitizer**, fixing subtle races that only manifested under heavy load.
-
----
-
-## License
-
-This project was developed as part of the 42 curriculum at Hive Helsinki.
